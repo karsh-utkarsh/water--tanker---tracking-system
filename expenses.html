@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Expenses Dashboard — Society</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="expenses.css" />
+</head>
+<body>
+  <div class="page">
+    <!-- HEADER -->
+    <header class="topbar">
+      <div class="topbar-left">
+        <div class="brand">
+          <div class="brand-logo" aria-hidden="true">💧</div>
+          <div class="brand-text">
+            <div class="brand-name">GreenVille Society</div>
+            <div class="brand-sub">Expenses Dashboard</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="topbar-right">
+        <div class="kpi-small">
+          <div class="kpi-label">Houses</div>
+          <div id="kpi-houses" class="kpi-value">—</div>
+        </div>
+        <button id="bookTanker" class="btn-outline">🔷 Book Tanker</button>
+        <button id="downloadCsv" class="btn-ghost" title="Download visible CSV">Download CSV</button>
+      </div>
+    </header>
+
+    <main class="container">
+      <!-- PAGE HEADER -->
+      <section class="page-header">
+        <h1>Expenses per flats / houses</h1>
+        <p class="muted">Monthly consumption and expense breakdown. Click any card for details. Use View More to open full list.</p>
+      </section>
+
+      <!-- TOP CARDS -->
+      <section class="top-cards" aria-hidden="false">
+        <article class="card big" id="cardTotalConsumption">
+          <div class="card-head">
+            <div class="card-title">Total Consumption</div>
+            <div class="card-sub">This month</div>
+          </div>
+          <div class="card-value" id="totalConsumptionVal">— L</div>
+          <div class="card-meta" id="totalConsumptionMeta"></div>
+        </article>
+
+        <article class="card big" id="cardTotalExpense">
+          <div class="card-head">
+            <div class="card-title">Total Expense</div>
+            <div class="card-sub">This month (INR)</div>
+          </div>
+          <div class="card-value" id="totalExpenseVal">—</div>
+          <div class="card-meta" id="totalExpenseMeta"></div>
+        </article>
+
+        <article class="card big" id="cardAvgExpense">
+          <div class="card-head">
+            <div class="card-title">Avg Expense / Flat</div>
+            <div class="card-sub">Estimate</div>
+          </div>
+          <div class="card-value" id="avgExpenseVal">—</div>
+          <div class="card-meta" id="avgExpenseMeta"></div>
+        </article>
+      </section>
+
+      <!-- FILTERS + SEARCH -->
+      <section class="controls-row">
+        <div class="search-wrap">
+          <input id="searchInput" type="search" placeholder="Search flat or owner (e.g. A-101 or Sharma)" />
+        </div>
+        <div class="filters">
+          <label class="filter">
+            <select id="sortSelect" aria-label="Sort flats">
+              <option value="percent_desc">Top % expense</option>
+              <option value="expense_desc">Top expense</option>
+              <option value="consumption_desc">Top consumption</option>
+              <option value="flat_asc">Flat ascending</option>
+            </select>
+          </label>
+          <label class="filter small">
+            <select id="alertFilter">
+              <option value="all">All</option>
+              <option value="alerts">Only Alerts</option>
+              <option value="high">High Spenders (&gt;2%)</option>
+            </select>
+          </label>
+        </div>
+      </section>
+
+      <!-- MAIN CARDS GRID (6 shown) -->
+      <section aria-label="Highlights" class="cards-grid" id="mainCards">
+        <!-- 6 beautiful cards injected by JS -->
+      </section>
+
+      <div class="center">
+        <button id="viewMoreBtn" class="btn-primary">View More</button>
+      </div>
+
+      <!-- Modal with more cards -->
+      <div id="modal" class="modal" aria-hidden="true" role="dialog" aria-modal="true">
+        <div class="modal-panel">
+          <div class="modal-header">
+            <h3>All Flats (preview)</h3>
+            <button id="modalClose" aria-label="Close">✕</button>
+          </div>
+          <div class="modal-body" id="modalCards">
+            <!-- 6 modal cards injected -->
+          </div>
+          <div class="modal-footer">
+            <button id="modalCloseFooter" class="btn-ghost">Close</button>
+            <button id="downloadAll" class="btn-primary">Download Full CSV</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- DETAILS PANEL (small slide-in) -->
+      <aside id="detailPanel" class="detail-panel" aria-hidden="true">
+        <button id="detailClose" class="detail-close" aria-label="Close details">✕</button>
+        <div id="detailContent"></div>
+      </aside>
+
+      <footer class="small-footer">
+        Built with care • Replace CSV source to attach your real data
+      </footer>
+    </main>
+  </div>
+
+  <!-- JS -->
+  <script src="expenses.js"></script>
+</body>
+</html>
