@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 first version 
 
 # Water Tanker Marketplace
@@ -36,3 +37,7 @@ A web-based marketplace to **book and track water tankers** in real-time. Users 
 
 ```bash
 git clone <repository-url>
+=======
+# water--tanker---tracking-system
+Smart water management for rural areas
+>>>>>>> 78c842c4e3b1881caf164fc3fe6bb22ec8da39ab
