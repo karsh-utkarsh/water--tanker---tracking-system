@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Water Tanker Booking</title>
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
+</head>
+<body>
+  <!-- Wrapper -->
+  <div class="container">
+
+    <!-- Header -->
+    <header>
+      <h1>Water Tanker Booking</h1>
+      <p>Book water tankers instantly to your location</p>
+    </header>
+
+    <!-- Booking Card -->
+    <section class="card">
+      <h2>Request a Tanker</h2>
+
+      <form>
+        <div class="form-group">
+          <label for="address">Delivery Address</label>
+          <input type="text" id="address" placeholder="Detecting your location..." required/>
+        </div>
+
+        <div class="form-group">
+          <label for="litres">Select Capacity</label>
+          <select id="litres">
+            <option value="500">500 Litres</option>
+            <option value="1000">1000 Litres</option>
+            <option value="5000">5000 Litres</option>
+            <option value="10000">10000 Litres</option>
+          </select>
+        </div>
+
+        <a href="result.html" class="btn">🚀 Find Tankers</a>
+
+      <!-- Map -->
+      <div id="map"></div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <p>© 2025 Water Tanker Marketplace • Powered by OpenStreetMap & Leaflet</p>
+    </footer>
+  </div>
+
+  <!-- Leaflet JS -->
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
