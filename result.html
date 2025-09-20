@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Available Tankers</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <link rel="stylesheet" href="style.css">
+
+  <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <h1> Nearby Water Tankers</h1>
+    <p>Choose the best tanker for your delivery</p>
+  </header>
+
+  <section class="results">
+
+
+    <div style="text-align:center; margin:20px 0;">
+      <a href="index.html" class="back-btn">← Back to Home</a>
+    </div>
+    
+
+    <!-- Booking Confirmation Modal -->
+<div id="bookingModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Confirm Your Booking</h2>
+      <p id="modal-tanker"></p>
+      <p id="modal-address"></p>
+      <p id="modal-price"></p>
+      <button id="confirmBooking" class="book-btn">✅ Confirm Booking</button>
+    </div>
+  </div>
+
+
+
+  <div id="compareModal" class="modal">
+    <div class="modal-content">
+      <span class="close" id="compareClose">&times;</span>
+      <h2>Compare Tankers</h2>
+      <div id="compareContent" style="display:flex; gap:15px; overflow-x:auto;"></div>
+    </div>
+  </div>
+  
+    <!-- Map -->
+    <div id="map"></div>
+
+      <div class="tanker-list">
+        <h2>Available Tankers</h2>
+        <input type="checkbox" class="compare-checkbox" data-name="5000L Tanker" data-price="800" data-eta="15 mins">
+        <div class="tanker-card">
+          <div class="tanker-img">
+            <img src="water1.jpg" alt="5000L Tanker">
+            <span class="badge available">Available Now</span>
+          </div>
+          <div class="tanker-info">
+            <h3>5000L Tanker</h3>
+            <div class="rating">⭐️⭐️⭐️⭐️☆ (4.0)</div>
+            <p>📍 2.5 km away | ETA: 15 mins</p>
+            <p>💰 ₹800</p>
+          </div>
+          <button class="book-btn" onclick="openBookingModal('5000L Tanker', 800)">Book Now</button>
+        </div>
+      
+        <div class="tanker-card">
+          <div class="tanker-img">
+            <input type="checkbox" class="compare-checkbox" data-name="10000L Tanker" data-price="1500" data-eta="15 mins">
+            <img src="water2.jpeg" alt="10000L Tanker">
+            <span class="badge unavailable">Unavailable</span>
+          </div>
+          <div class="tanker-info">
+            <h3>10000L Tanker</h3>
+            <div class="rating">⭐️⭐️⭐️⭐️⭐️ (5.0)</div>
+            <p>📍 4 km away | ETA: 20 mins</p>
+            <p>💰 ₹1500</p>
+          </div>
+          <button class="book-btn" onclick="openBookingModal('10000L Tanker', 1500)">Book Now</button>
+        </div>
+      
+        <div class="tanker-card">
+          <div class="tanker-img">
+            <input type="checkbox" class="compare-checkbox" data-name="2000L Tanker" data-price="400" data-eta="15 mins">
+            <img src="water3.png" alt="2000L Tanker">
+            <span class="badge available">Available Now</span>
+          </div>
+          <div class="tanker-info">
+            <h3>2000L Tanker</h3>
+            <div class="rating">⭐️⭐️⭐️ (3.0)</div>
+            <p>📍 1.2 km away | ETA: 10 mins</p>
+            <p>💰 ₹400</p>
+          </div>
+          <button class="book-btn" onclick="openBookingModal('2000L Tanker', 400)">Book Now</button>
+        </div>
+      </div>
+      
+    
+
+    <div style="text-align:center; margin-bottom:20px;">
+      <button id="compareBtn" class="book-btn">Compare Selected Tankers</button>
+    </div>
+    
+  
+
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Water Tanker Marketplace</p>
+  </footer>
+
+  <!-- Leaflet JS -->
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <script src="result.js"></script>
+</body>
+</html>

@@ -1,0 +1,470 @@
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Roboto, sans-serif;
+}
+
+/* Background */
+body {
+  background: linear-gradient(135deg, #0077cc, #00b4d8);
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* Container */
+.container {
+  width: 100%;
+  max-width: 900px;
+  text-align: center;
+}
+
+/* Header */
+header h1 {
+  color: #fff;
+  font-size: 2rem;
+  font-weight: bold;
+}
+header p {
+  color: #e0f7ff;
+  margin-bottom: 30px;
+  font-size: 1rem;
+}
+
+/* Card */
+.card {
+  background: #fff;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  margin: 0 auto;
+}
+.card h2 {
+  margin-bottom: 20px;
+  color: #0077cc;
+}
+
+/* Form */
+form {
+  margin-bottom: 20px;
+}
+.form-group {
+  margin-bottom: 15px;
+  text-align: left;
+}
+label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #444;
+  margin-bottom: 5px;
+  display: block;
+}
+input,
+select {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  outline: none;
+  transition: 0.2s ease-in-out;
+  font-size: 1rem;
+}
+input:focus,
+select:focus {
+  border-color: #0077cc;
+  box-shadow: 0 0 6px rgba(0, 119, 204, 0.3);
+}
+
+/* Button */
+button {
+  width: 100%;
+  padding: 14px;
+  background: #0077cc;
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.2s;
+}
+button:hover {
+  background: #005fa3;
+}
+
+/* Map */
+#map {
+  width: 100%;
+  height: 300px;
+  margin-top: 15px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: inset 0 0 8px rgba(0,0,0,0.1);
+}
+
+/* Footer */
+footer {
+  margin-top: 20px;
+  color: #fff;
+  font-size: 0.85rem;
+}
+/* Results Layout */
+
+
+/* Font & Reset */
+body {
+  font-family: 'Inter', sans-serif;
+  background: linear-gradient(135deg, #00b4d8, #90e0ef);
+  margin: 0;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* Header */
+header {
+  text-align: center;
+  padding: 25px;
+  color: #fff;
+}
+header h1 {
+  font-weight: 700;
+  font-size: 2.2rem;
+  margin-bottom: 10px;
+}
+header p {
+  font-weight: 400;
+  font-size: 1rem;
+  color: #e0f7ff;
+}
+
+/* Results Section */
+.results {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 20px;
+}
+
+/* Map */
+#map {
+  width: 90%;
+  max-width: 900px;
+  height: 350px;
+  border-radius: 16px;
+  margin-bottom: 25px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+}
+
+/* Tanker List Container */
+.tanker-list {
+  width: 90%;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+.tanker-list h2 {
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  color: #0077cc;
+  margin-bottom: 25px;
+  font-weight: 700;
+}
+
+/* Tanker Card */
+.tanker-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #fff;
+  border-radius: 12px;
+  padding: 10px 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.tanker-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+}
+
+/* Tanker Image */
+.tanker-img {
+  position: relative;
+  width: 150px;
+  height: 100px;
+  flex-shrink: 0;
+}
+
+.tanker-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.badge {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  padding: 3px 8px;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  color: #fff;
+  font-weight: 600;
+}
+
+.badge.available { background: #28a745; }
+.badge.unavailable { background: #dc3545; }
+
+/* Tanker Info */
+.tanker-info {
+  flex: 1;
+  margin-left: 20px;
+}
+
+.tanker-info h3 {
+  margin: 0 0 5px 0;
+  font-size: 1.3rem;
+  color: #333;
+}
+
+.tanker-info p {
+  margin: 2px 0;
+  color: #555;
+  font-size: 0.95rem;
+}
+
+.rating {
+  color: #ffb400;
+  font-size: 0.9rem;
+  margin-bottom: 5px;
+}
+
+/* Book Button */
+.book-btn {
+  background: #0077cc;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  font-size: 0.95rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.book-btn:hover {
+  background: #005fa3;
+  transform: scale(1.05);
+}
+
+/* Responsive */
+@media screen and (max-width: 700px) {
+  .tanker-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .tanker-img {
+    width: 100%;
+    height: 180px;
+  }
+  .tanker-info {
+    margin-left: 0;
+    margin-top: 10px;
+  }
+}
+
+
+/* Footer */
+footer {
+  margin-top: 20px;
+  text-align: center;
+  color: #fff;
+  font-size: 0.9rem;
+  padding-bottom: 20px;
+}
+
+/* Modal Overlay */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.5);
+  backdrop-filter: blur(4px);
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fff;
+  margin: 10% auto;
+  padding: 30px 25px;
+  border-radius: 16px;
+  width: 90%;
+  max-width: 400px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+  text-align: center;
+  animation: slideDown 0.3s ease-out;
+}
+
+/* Close Button */
+.close {
+  color: #888;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.close:hover {
+  color: #333;
+}
+
+/* Animation */
+@keyframes slideDown {
+  from { transform: translateY(-50px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+.back-btn {
+  display: inline-block;
+  padding: 10px 18px;
+  background: #555;
+  color: white;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background 0.2s ease;
+}
+
+.back-btn:hover {
+  background: #333;
+}
+
+
+
+
+
+#trackMap {
+  height: 400px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*link button*/
+
+.book-btn {
+  margin-top: 10px;
+  padding: 10px 15px;
+  background: #0077cc;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.book-btn:hover {
+  background: #005fa3;
+}
+.btn {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  padding: 14px;
+  background: #0077cc;
+  color: white;
+  border-radius: 12px;
+  font-weight: bold;
+  text-decoration: none;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.btn:hover {
+  background: #005fa3;
+}
