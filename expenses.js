@@ -1,12 +1,6 @@
-/* expenses.js
-   Expenses Dashboard
-   - Loads CSV 'Society_Water_Expenses.csv' (must be in same folder)
-   - Renders society totals and beautiful cards (6 main + 6 modal)
-   - Modal shows additional cards; each card opens detail panel
-   - Search, sort and filters included
-*/
 
-const CSV_PATH = 'Society_Water_Expenses_Unique.csv'; // generated CSV
+
+const CSV_PATH = 'Society_Water_Expenses_Unique.csv'; 
 const MAIN_SHOW = 6;
 const MODAL_SHOW = 9999;
 

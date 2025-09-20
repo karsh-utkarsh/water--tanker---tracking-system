@@ -111,4 +111,4 @@ window.onload = function() {
     compareClose.onclick = () => compareModal.style.display = "none";
     window.onclick = (event) => { if(event.target === compareModal) compareModal.style.display = "none"; }
   };
-  
+   
